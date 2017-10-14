@@ -1,0 +1,100 @@
+body {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;	
+    background: #4f322f;
+
+}
+
+.divider {
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	animation-name: grow-divider;
+	animation-duration: 1s;
+}
+
+.frame {
+	position: absolute;
+	border: 1px solid burlywood;
+	width: calc(100% - 96px);
+	height: calc(100% - 96px);
+	left: 48px;
+	top: 48px;
+	animation-name: popup;
+	animation-duration: 1s;
+}
+
+.burlywood {
+	color: burlywood;
+}
+
+.icon-text {
+	font-family: "Roboto";
+  	font-weight: 300;
+}
+
+#about {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: calc(100% - 48px);
+	width: 100%;
+}
+
+#tabs-swipe {
+	position: absolute;
+	bottom: 0;
+}
+#tabs-swipe .indicator {
+	top: 0;
+}
+
+.contact-info {
+	padding: 10em;
+	animation-name: popup;
+	animation-duration: 0.5s;
+	margin-top: 2em;
+	background-image: url("../img/thought_bubble.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.contact-info div {
+	margin: 1em 0;
+}
+
+@keyframes grow-divider {
+	from {
+		width: 0;
+		left: 50%;
+	}
+	to {
+		width: 50%;
+		left: 25%;
+	}
+}
+
+@keyframes popup {
+	from {
+		border-width: 0px;
+		width: 0px;
+		height: 0px;
+		left: calc(50%);
+		top: calc(50%);
+	}
+	20% {
+		border-width: 0px;
+	}
+	to {
+		border-width: 1px;
+		width: calc(100% - 96px);
+		height: calc(100% - 96px);
+		left: 48px;
+		top: 48px;
+	}
+}
+
