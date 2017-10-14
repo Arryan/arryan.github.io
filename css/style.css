@@ -4,9 +4,7 @@ body {
 	width: 100%;
 	top: 0;
 	left: 0;
-	overflow: hidden;	
-    background: #4f322f;
-
+	overflow: hidden;
 }
 
 .divider {
@@ -15,21 +13,18 @@ body {
 	left: 25%;
 	animation-name: grow-divider;
 	animation-duration: 1s;
+	background-color: #78909c ;
 }
 
 .frame {
 	position: absolute;
-	border: 1px solid burlywood;
+	border: 2px solid #546e7a;
 	width: calc(100% - 96px);
-	height: calc(100% - 96px);
+	height: calc(100% - 94px);
 	left: 48px;
 	top: 48px;
 	animation-name: popup;
 	animation-duration: 1s;
-}
-
-.burlywood {
-	color: burlywood;
 }
 
 .icon-text {
@@ -48,9 +43,27 @@ body {
 #tabs-swipe {
 	position: absolute;
 	bottom: 0;
+	width: calc(100% - 98px);
+	left: 49px;
+	color: purple;
+	background: transparent;
 }
 #tabs-swipe .indicator {
 	top: 0;
+	background: #78909c ;
+	animation-name: indicator-appear;
+	animation-duration: 3s;
+}
+.tabs .tab a {
+	color: #546e7a;
+	transition: color 0.5s;
+	font-size: 20px;
+}
+.tabs .tab a.active{
+	color: #78909c;
+}
+.tabs .tab a:hover {
+	color: #78909c;
 }
 
 .contact-info {
@@ -91,10 +104,21 @@ body {
 	}
 	to {
 		border-width: 1px;
-		width: calc(100% - 96px);
-		height: calc(100% - 96px);
+		width: calc(100% - 94px);
+		height: calc(100% - 94px);
 		left: 48px;
 		top: 48px;
 	}
 }
 
+@keyframes indicator-appear {
+	from {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

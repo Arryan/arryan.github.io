@@ -7,28 +7,28 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body>
+<body class="blue-grey">
 	<script type="text/javascript">
     	document.getElementsByTagName("body")[0].style.display = "none"
 	</script>
 	<div class="row">
+		<div class="frame"></div>
 		<div id="about" class="valign-wrapper">
-			<div class="frame"></div>
 			<div class="col s12 center-align">
-				<h1 class="red-text text-lighten-1"><b>Arryan</b> Zaman</h1>
+				<h1 class="blue-grey-text text-darken-4"><b>Arryan</b> Zaman</h1>
 				<div class="divider"></div>
-				<h4 class="burlywood">Programmer</h4>
-				<i class="fa fa-map-marker fa-2x burlywood"> <span class="icon-text">Ottawa</span></i>
+				<h4 class="blue-grey-text text-lighten-2">Programmer</h4>
+				<i class="fa fa-map-marker fa-2x blue-grey-text text-lighten-1"> <span class="icon-text">Ottawa</span></i>
 			</div>
 		</div>
-		<div id="test-swipe-2" class="col s12">Education</div>
-		<div id="test-swipe-3" class="col s12">Projects</div>
-		<div id="test-swipe-4" class="col s12">Skills</div>
+		<div id="education" class="col s12">Lorem</div>
+		<div id="projects" class="col s12">Ipsum</div>
+		<div id="skills" class="col s12">Dolor</div>
 		<ul id="tabs-swipe" class="tabs">
 			<li class="tab col s3"><a class="active" href="#about">About</a></li>
-			<li class="tab col s3"><a href="#test-swipe-2">Education</a></li>
-			<li class="tab col s3"><a href="#test-swipe-3">Projects</a></li>
-			<li class="tab col s3"><a href="#test-swipe-4">Skills</a></li>
+			<li class="tab col s3"><a href="#education">Education</a></li>
+			<li class="tab col s3"><a href="#projects">Projects</a></li>
+			<li class="tab col s3"><a href="#skills">Skills</a></li>
 		</ul>
 	</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -37,6 +37,8 @@
 	<script type="text/javascript">
 	$(document).ready(function() {
     	$('body').show();
+    	$('ul.tabs').tabs();
+    	//$('.tabs').tabs({swipeable: true});
 	});
 	</script>
 </body>
