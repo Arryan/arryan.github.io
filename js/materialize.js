@@ -2771,7 +2771,7 @@ if (Vel) {
               setTimeout(function(){
                 $oldContent.hide();
                 $oldContent.removeClass('active');
-              }, 1000);
+              }, 900);
             }
           }
 

@@ -7,6 +7,22 @@ body {
 	overflow: hidden;
 }
 
+dl {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+#education ul,#education ul li {
+	width: 100%;
+	padding: 3em;
+}
+#vanier, #carleton {
+	padding: 3em;
+}
+
 .divider {
 	position: absolute;
 	width: 50%;
@@ -27,20 +43,20 @@ body {
 	animation-duration: 1s;
 }
 
+.row {
+	width: 100%;
+}
+
 .icon-text {
 	font-family: "Roboto";
   	font-weight: 300;
 }
 
-#about {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: calc(100% - 48px);
-	width: 100%;
-}
-
 #about, #education, #projects, #skills {
+	top: 0;
+	left: 48px;
+	height: calc(100% - 48px);
+	width: calc(100% - 96px);
 	position: absolute;
 	animation-duration: 1s;
 }
@@ -62,7 +78,6 @@ body {
 .tabs .tab a {
 	color: #26a69a;
 	transition: color 0.5s;
-	font-size: 20px;
 }
 .tabs .tab a.active{
 	color: #80cbc4;
@@ -74,6 +89,8 @@ body {
 .keyboard {
 	max-width: 50%;
 	display: inline-block;
+	animation-name: keyboard-appear;
+	animation-duration: 1s;
 }
 
 .contact-btn {
@@ -85,7 +102,7 @@ body {
 		left: 100%;
 	}
 	to {
-		left:0;
+		left: 48px;
 	}
 }
 @keyframes appear-right {
@@ -93,12 +110,12 @@ body {
 		left: -100%;
 	}
 	to {
-		left:0;
+		left: 48px;
 	}
 }
 @keyframes disappear-left {
 	from {
-		left: 0;
+		left: 48px;
 	}
 	to {
 		left: -100%;
@@ -106,7 +123,7 @@ body {
 }
 @keyframes disappear-right {
 	from {
-		left: 0%;
+		left: 48px;
 	}
 	to {
 		left: 100%;
@@ -153,5 +170,14 @@ body {
 	}
 	to {
 		background-color: #80cbc4;
+	}
+}
+
+@keyframes keyboard-appear {
+	from {
+		transform: rotate3d(0,1,0.5,180deg);
+	}
+	to {
+		transform: rotate3d(0,1,0,0deg);
 	}
 }
