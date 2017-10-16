@@ -40,6 +40,11 @@ body {
 	width: 100%;
 }
 
+#about, #education, #projects, #skills {
+	position: absolute;
+	animation-duration: 1s;
+}
+
 #tabs-swipe {
 	position: absolute;
 	bottom: 0;
@@ -66,18 +71,37 @@ body {
 	color: #78909c;
 }
 
-.contact-info {
-	padding: 10em;
-	animation-name: popup;
-	animation-duration: 0.5s;
-	margin-top: 2em;
-	background-image: url("../img/thought_bubble.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+@keyframes appear-left {
+	from {
+		left: 100%;
+	}
+	to {
+		left:0;
+	}
 }
-
-.contact-info div {
-	margin: 1em 0;
+@keyframes appear-right {
+	from {
+		left: -100%;
+	}
+	to {
+		left:0;
+	}
+}
+@keyframes disappear-left {
+	from {
+		left: 0;
+	}
+	to {
+		left: -100%;
+	}
+}
+@keyframes disappear-right {
+	from {
+		left: 0%;
+	}
+	to {
+		left: 100%;
+	}
 }
 
 @keyframes grow-divider {

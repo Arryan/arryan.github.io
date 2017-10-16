@@ -2768,8 +2768,10 @@ if (Vel) {
             }
 
             if ($oldContent !== undefined && !$oldContent.is($content)) {
-              $oldContent.hide();
-              $oldContent.removeClass('active');
+              setTimeout(function(){
+                $oldContent.hide();
+                $oldContent.removeClass('active');
+              }, 1000);
             }
           }
 
