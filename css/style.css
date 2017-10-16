@@ -13,12 +13,12 @@ body {
 	left: 25%;
 	animation-name: grow-divider;
 	animation-duration: 1s;
-	background-color: #78909c ;
+	background-color: #26a69a ;
 }
 
 .frame {
 	position: absolute;
-	border: 2px solid #546e7a;
+	border: 2px solid #26a69a;
 	width: calc(100% - 96px);
 	height: calc(100% - 94px);
 	left: 48px;
@@ -55,20 +55,29 @@ body {
 }
 #tabs-swipe .indicator {
 	top: 0;
-	background: #78909c ;
+	background: #80cbc4;
 	animation-name: indicator-appear;
 	animation-duration: 3s;
 }
 .tabs .tab a {
-	color: #546e7a;
+	color: #26a69a;
 	transition: color 0.5s;
 	font-size: 20px;
 }
 .tabs .tab a.active{
-	color: #78909c;
+	color: #80cbc4;
 }
 .tabs .tab a:hover {
-	color: #78909c;
+	color: #80cbc4;
+}
+
+.keyboard {
+	max-width: 50%;
+	display: inline-block;
+}
+
+.contact-btn {
+	color: red;
 }
 
 @keyframes appear-left {
@@ -137,12 +146,12 @@ body {
 
 @keyframes indicator-appear {
 	from {
-		opacity: 0;
+		background-color: #00796b;
 	}
-	20% {
-		opacity: 0;
+	30% {
+		background-color: #00796b;
 	}
 	to {
-		opacity: 1;
+		background-color: #80cbc4;
 	}
 }

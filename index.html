@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body class="blue-grey">
+<body class="teal darken-2">
 	<script type="text/javascript">
     	document.getElementsByTagName("body")[0].style.display = "none"
 	</script>
@@ -15,10 +15,18 @@
 		<div class="frame"></div>
 		<div id="about" class="valign-wrapper">
 			<div class="col s12 center-align">
-				<h1 class="blue-grey-text text-darken-4"><b>Arryan</b> Zaman</h1>
+				<img class="keyboard" src="img/keyboard.png" draggable="false">
+				<h1 class="teal-text"><b>Arryan</b> Zaman</h1>
 				<div class="divider"></div>
-				<h4 class="blue-grey-text text-lighten-2">Programmer</h4>
-				<i class="fa fa-map-marker fa-2x blue-grey-text text-lighten-1"> <span class="icon-text">Ottawa</span></i>
+				<h4 class="teal-text text-lighten-2">Programmer</h4>
+				<i class="fa fa-caret-down fa-2x teal-text pulse" style="display: block"></i>
+				<div class="row" style="padding-top: 3em">
+					<div class="col s12">
+						<a href="https://github.com/arryan"><i class="fa fa-github fa-2x teal-text contact-btn"> &nbsp;</i></a>
+						<a href="mailto:arryan.zaman@hotmail.com"><i class="fa fa-envelope fa-2x teal-text contact-btn"> &nbsp;</i></a>
+						<a href="tel:514-627-0530"><i class="fa fa-phone fa-2x teal-text contact-btn modal-trigger"> &nbsp;</i></a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="education" class="col s12">Lorem</div>
@@ -34,39 +42,6 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://use.fontawesome.com/dc333f10a5.js"></script>
 	<script type="text/javascript" src="js/materialize.js"></script>
-	<script type="text/javascript">
-		var page_key = {
-			"#about": 1,
-			"#education": 2,
-			"#projects": 3,
-			"#skills": 4
-		};
-
-		var current_page = "#about";
-
-		$(document).ready(function() {
-	    	$('body').show();
-	    	$('ul.tabs').tabs();
-	    	//$('.tabs').tabs({swipeable: true});
-	    	$('.tab a').click(assign_animation)
-		});
-
-		function assign_animation(e) {
-			let page = e.target.getAttribute("href");
-
-			if(page_key[page] > page_key[current_page]) {
-				$(page).css("animation-name", "appear-left");
-				$(current_page).css("display", "flex");
-				$(current_page).css("animation-name", "disappear-left");
-			}
-			else if(page_key[page] < page_key[current_page]) {
-				$(page).css("animation-name", "appear-right");
-				$(current_page).css("display", "flex");
-				$(current_page).css("animation-name", "disappear-right");
-			}
-
-			current_page = page;
-		}
-	</script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
