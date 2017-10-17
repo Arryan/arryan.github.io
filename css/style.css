@@ -17,10 +17,6 @@ img {
 
 #education ul,#education ul li {
 	width: 100%;
-	padding: 3em;
-}
-#vanier, #carleton {
-	padding: 3em;
 }
 
 .divider {
@@ -53,9 +49,9 @@ img {
 }
 
 #about, #education, #projects, #skills {
-	top: 0;
+	top: 48px;
 	left: 48px;
-	height: calc(100% - 48px);
+	height: calc(100% - 96px);
 	width: calc(100% - 96px);
 	position: absolute;
 	animation-duration: 1s;
@@ -95,6 +91,16 @@ img {
 
 .contact-btn {
 	color: red;
+}
+
+#education img {
+	height: 1.5em;
+}
+#education * {
+	border: teal;
+}
+#education div ul * {
+	background: transparent;
 }
 
 @keyframes appear-left {
