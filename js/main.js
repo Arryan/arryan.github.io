@@ -12,6 +12,8 @@ $(document).ready(function() {
 	$('ul.tabs').tabs();
 	//$('.tabs').tabs({swipeable: true});
 	$('.tab a').click(assign_animation)
+	$('.carousel.carousel-slider').carousel({fullWidth: true});
+	$('.carousel.carousel-slider').css("height", "calc(100% - 4px)");
 });
 
 function assign_animation(e) {
@@ -24,7 +26,7 @@ function assign_animation(e) {
 	}
 	else if(page_key[page] < page_key[current_page]) {
 		$(page).css("animation-name", "appear-right");
-		$(current_page).css("display", "block");
+		$(current_page).css("display", "flex");
 		$(current_page).css("animation-name", "disappear-right");
 	}
 

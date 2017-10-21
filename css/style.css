@@ -93,14 +93,37 @@ img {
 	color: red;
 }
 
-#education img {
-	height: 1.5em;
+.collapsible-header img {
+	height: 2em;
+	position: absolute;
+	right: calc(48px + 1em);
+}
+#education .chip {
+	float: right;
+	background-color: #4db6ac;
+	color: #00695c
+}
+#education .collection-item:hover{
+	background-color: #00695c;
+}
+#education .collection-item{
+	padding-bottom: 15px;
 }
 #education * {
 	border: teal;
 }
-#education div ul * {
+#education div ul li {
 	background: transparent;
+}
+.collapsible {
+	box-shadow: none;
+}
+.collapsible-header:before {
+	content: "[ - ]\00a0\00a0";
+	font-weight: 900;
+}
+.collapsible-header.active:before {
+	content: "[ + ]\00a0\00a0";
 }
 
 @keyframes appear-left {
