@@ -98,6 +98,9 @@ img {
 	position: absolute;
 	right: calc(48px + 1em);
 }
+.collapsible-body {
+	padding: 0;
+}
 #education .chip {
 	float: right;
 	background-color: #4db6ac;
