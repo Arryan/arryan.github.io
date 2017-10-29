@@ -21,12 +21,10 @@ function assign_animation(e) {
 
 	if(page_key[page] > page_key[current_page]) {
 		$(page).css("animation-name", "appear-left");
-		$(current_page).css("display", "flex");
 		$(current_page).css("animation-name", "disappear-left");
 	}
 	else if(page_key[page] < page_key[current_page]) {
 		$(page).css("animation-name", "appear-right");
-		$(current_page).css("display", "flex");
 		$(current_page).css("animation-name", "disappear-right");
 	}
 
