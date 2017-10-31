@@ -52,13 +52,17 @@ img {
   	font-weight: 300;
 }
 
-#about, #education, #projects, #skills {
+#about, #education, #projects {
 	top: 48px;
 	left: 48px;
 	height: calc(100% - 96px);
 	width: calc(100% - 96px);
 	position: absolute;
 	animation-duration: 1s;
+}
+
+#education, #projects {
+	overflow: auto;
 }
 
 #tabs-swipe {
