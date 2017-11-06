@@ -1,5 +1,5 @@
 html {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 }
 
 body {
@@ -9,17 +9,19 @@ body {
 	top: 0;
 	left: 0;
 	overflow: hidden;
+	background-color: #d2fffa;
 }
 
-dl {
-	margin: 0;
-}
 
 img {
 	max-width: 100%;
 }
 
-#education ul,#education ul li {
+h5 {
+	margin-top: 2em;
+}
+
+#skills ul,#skills ul li {
 	width: 100%;
 }
 
@@ -29,12 +31,13 @@ img {
 	left: 25%;
 	animation-name: grow-divider;
 	animation-duration: 1s;
-	background-color: #26a69a ;
+	background-color: #014e47 ;
+	margin: 5px;
 }
 
 .frame {
 	position: absolute;
-	border: 2px solid #26a69a;
+	border: 2px solid #014e47;
 	width: calc(100% - 96px);
 	height: calc(100% - 94px);
 	left: 48px;
@@ -52,7 +55,7 @@ img {
   	font-weight: 300;
 }
 
-#about, #education, #projects {
+#about, #skills, #projects {
 	top: 48px;
 	left: 48px;
 	height: calc(100% - 96px);
@@ -61,7 +64,7 @@ img {
 	animation-duration: 1s;
 }
 
-#education, #projects {
+#skills, #projects {
 	overflow: auto;
 }
 
@@ -75,23 +78,28 @@ img {
 }
 #tabs-swipe .indicator {
 	top: 0;
-	background: #80cbc4;
-	animation-name: indicator-appear;
-	animation-duration: 3s;
+	background: #d2fffa;
 }
 .tabs .tab a {
 	color: #26a69a;
 	transition: color 0.5s;
 }
 .tabs .tab a.active{
-	color: #80cbc4;
+	color: #014e47;
+	font-weight: bold
+}
+.tabs .tab a.active::before{
+	content: "// ";
 }
 .tabs .tab a:hover {
-	color: #80cbc4;
+	color: #014e47;
+}
+.tabs .tab a:hover::before {
+	content: "// ";
 }
 
 .keyboard {
-	max-width: 50%;
+	max-width: 85%;
 	display: inline-block;
 	animation-name: keyboard-appear;
 	animation-duration: 1s;
@@ -109,21 +117,21 @@ img {
 .collapsible-body {
 	padding: 0;
 }
-#education .chip {
+#skills .chip {
 	float: right;
 	background-color: #4db6ac;
 	color: #00695c
 }
-#education .collection-item:hover{
+#skills .collection-item:hover{
 	background-color: #00695c;
 }
-#education .collection-item{
+#skills .collection-item{
 	padding-bottom: 15px;
 }
-#education * {
+#skills * {
 	border: teal;
 }
-#education div ul li {
+#skills div ul li {
 	background: transparent;
 }
 .collapsible {
@@ -232,10 +240,10 @@ img {
 
 @keyframes indicator-appear {
 	from {
-		background-color: #00796b;
+		background-color: #d2fffa;
 	}
-	30% {
-		background-color: #00796b;
+	50% {
+		background-color: #d2fffa;
 	}
 	to {
 		background-color: #80cbc4;

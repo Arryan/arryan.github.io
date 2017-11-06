@@ -1,11 +1,10 @@
-var page_key = {
+let page_key = {
 	"#about": 1,
-	"#education": 2,
-	"#projects": 3,
-	"#skills": 4
+	"#skills": 2,
+	"#projects": 3
 };
 
-var current_page = "#about";
+let current_page = "#about";
 
 $(document).ready(function() {
 	$('body').show();
@@ -14,6 +13,7 @@ $(document).ready(function() {
 	$('.tab a').click(assign_animation)
 	$('.carousel.carousel-slider').carousel({fullWidth: true});
 	$('.carousel.carousel-slider').css("height", "calc(100% - 4px)");
+	$('keyboard').css("animation-name", "none");
 });
 
 function assign_animation(e) {
