@@ -128,9 +128,6 @@ h5 {
 #skills .collection-item{
 	padding-bottom: 15px;
 }
-#skills * {
-	border: teal;
-}
 #skills div ul li {
 	background: transparent;
 }
@@ -163,6 +160,43 @@ h5 {
 }
 #projects {
 	padding: 2px;
+}
+
+.meter {
+	height: 2em;
+	border: 2px solid teal;
+	margin: 2px;
+	border-radius: 2px;
+}
+.meter span {
+	height: 100%;
+	width: 50%;
+	display: block;
+}
+.meter span span {
+	height: 100%;
+	width: 100%;
+	background-color: teal;
+	display: block;
+	animation-name: skill-grow;
+	animation-duration: 2s;
+	color: white;
+	padding-left: 2rem;
+	text-align: left;
+}
+.skill {
+	height: 2em;
+	margin: 2px;
+	text-align: right;
+}
+
+@keyframes skill-grow {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
 }
 
 @keyframes background-move {
