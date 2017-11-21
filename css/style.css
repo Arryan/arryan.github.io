@@ -58,7 +58,7 @@ h5 {
 #about, #skills, #projects {
 	top: 48px;
 	left: 48px;
-	height: calc(100% - 96px);
+	height: calc(100% - 94px);
 	width: calc(100% - 96px);
 	position: absolute;
 	animation-duration: 1s;
@@ -151,7 +151,8 @@ h5 {
 }
 .project-banner h3 {
 	margin: 0;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgb(210, 255, 250);
+	color: #014e47;
 }
 .overlay {
 	width: 100%;
