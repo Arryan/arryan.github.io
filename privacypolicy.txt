@@ -1,0 +1,1 @@
+None of the data is used. The permissions are only required because React Native sets them that way by default.
